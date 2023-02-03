@@ -1,0 +1,161 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-style: italic;
+}
+
+.container{
+    font-size: x-large;
+    color: white;
+}
+
+p{
+    color: rgba(255, 255, 255, 0.677);
+    font-size: x-large;
+}
+
+.red{
+    color: red;
+}
+.c_w{ 
+    color: rgba(255, 255, 255, 0.689);
+}
+
+h1{
+    padding-top: 330px;
+    text-align: center;
+    font-size: 130px;
+    color: rgba(255, 255, 255, 0.542);
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.394);
+    width: 200px;
+    height:25px;
+    padding-right:3px ;
+}
+
+.marg{
+    padding-top: 480px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.results {
+    font-size: xx-large;
+    font-weight: 600;
+    text-align: center;
+}
+
+textarea{
+    margin-top: 40px;
+    height: 100px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.327);
+
+}
+
+.results_box{
+    display: flex;
+    justify-content: center;
+}
+
+
+.select {
+    background-color: rgba(255, 255, 255, 0.394);
+    width: 200px;
+    height:30px;
+    font-weight: 500;
+}
+
+#main_video{
+    position: fixed;
+    z-index: -5;
+}
+@media (min-aspect-ratio: 16/9){
+    #main_video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    #main_video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.gradient-text {
+
+    background-color: #bb0309df;
+
+    background-image: linear-gradient(45deg, rgb(182, 7, 7), rgb(21, 87, 193));
+    
+    background-size: 100%;
+    background-repeat: repeat;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    
+    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+}
+
+.gradient-text:hover{
+    animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+
+@keyframes rainbow-text-simple-animation-rev {
+    0% {
+    background-size: 650%;
+    }
+    40% {
+    background-size: 650%;
+    }
+    100% {
+    background-size: 100%;
+}
+}
+@keyframes rainbow-text-simple-animation {
+    0% {
+    background-size: 100%;
+    }
+    80% {
+    background-size: 650%;
+    }
+    100% {
+    background-size: 650%;
+    }
+}
+
+
+button{
+    padding: 25px 30px;
+    background-color: #05080100;
+    color: #03e9f4;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}

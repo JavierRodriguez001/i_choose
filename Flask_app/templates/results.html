@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Results</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+    <script type="text/javascript" src="{{url_for('static',filename='script.js')}}"></script>
+
+</head>
+<body class="bg_img1">
+    <video id="main_video" autoplay muted loop>
+        <source src="{{url_for('static',filename='Neon.mp4')}}" type="video/mp4">
+    </video>
+    <h1 class="gradient-text marg"> i Choose!</h1>
+    <div class="results_box">
+        <div>
+            <p style="text-align: center;margin-bottom: 30px;margin-top: 20px;">Chose For you:</p>
+            <div class="results" id="restaurant_chosen">
+                <P class="results gradient-text">
+                    {{results[ran_num].name}}
+                </P>
+                <p class="gradient-text">
+                    {{results[ran_num].address_obj.address_string}}
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Choose</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+    <script type="text/javascript" src="{{url_for('static',filename='script.js')}}" defer></script>
+
+
+</head>
+
+<body>
+    <video id="main_video" autoplay muted loop>
+        <source src="{{url_for('static',filename='Neon.mp4')}}" type="video/mp4">
+    </video>
+    <div>
+
+        <h1 class="gradient-text">i Choose!</h1>
+
+
+        <div style="text-align: center;">
+            <p>Click the button to get your coordinates.</p>
+            <button onclick="getLocation()">Location</button>
+            <p id="coordinates" class="center gradient-text"></p>
+        </div>
+
+
+        <div class="center">
+
+
+            <form action="/getresults" method="POST" style="display: flex;">
+
+                <div>
+                    
+                    <div>
+                        <div>
+                            <div class="center">
+                                <p>Copy & Paste</p>
+                            </div>
+                            <div class="center">
+                                <p>Coordinates Below!!</p>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <input id="location" name="location">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="center">
+                            <p>Category:</p>
+                        </div>
+                        <div class="center">
+                            <select id="category" name="category" class="select">
+                                <option value="restaurants">Restaurant</option>
+                                <option value="hotels">Hotels</option>
+                                <option value="attractions">Attractions</option>
+                                <option value="geos">Geos</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="center">
+                            <p>Max Miles From Your Location:</p>
+                        </div>
+                        <div class="center">
+                            <input id="radius" name="radius">
+                        </div>
+                    </div>
+
+                    
+                    <div class="center">
+                        <div>
+                            <button>Choose For Me!!</button>
+                        </div>
+                    </div>
+                </div>
+                    
+            </form>
+
+
+
+
+        </div>
+
+
+        <div class="flex results">
+            <span class="gradient-text">WE CHOOSE FOR YOU!</span>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
